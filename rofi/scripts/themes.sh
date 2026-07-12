@@ -1,5 +1,5 @@
 #!/bin/bash
-folder="~/.config/hyprlandThemes"
+folder="/home/$USER/.config/hyprlandThemes"
 mapfile -t themes < <(find "$folder" -type f \( -iname "*.conf" \) -printf "%f\t%p\n")
 selected=$(printf '%s\n' "${themes[@]}" | cut -f1 | rofi -dmenu -theme ~/.config/rofi/themes/blue2.rasi -i -p "Themes")
 if [ -n "$selected" ]; then
