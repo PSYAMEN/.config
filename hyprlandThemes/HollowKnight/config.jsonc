@@ -61,7 +61,7 @@
         "on-click": "pwvucontrol"
     },
     "custom/spotify": {
-        "exec": "/usr/bin/python3 /home/psyamen/.config/waybar/mediaplayer.py --player spotify",
+        "exec": "/usr/bin/python3 ~/.config/waybar/mediaplayer.py --player spotify",
         "format": "{}  ",
         "return-type": "json",
         "on-click": "playerctl play-pause",
@@ -69,7 +69,7 @@
         "on-scroll-down": "playerctl previous",
     },
      "custom/cava": {
-         "exec": "/home/PSYAMEN/.config/cava/rawtobar.sh",
+         "exec": "~/.config/cava/rawtobar.sh",
          "retunr-type":"string",
          "tooltip": false
 },

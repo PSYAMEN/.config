@@ -2,7 +2,7 @@
 bars=▁▂▃▄▅▆▇█
 space=' '
 saver=500
-cava -p /home/psyamen/.config/cava/confs/waybarConf1 | while read -r line
+cava -p ~/.config/cava/confs/waybarConf1 | while read -r line
   do
   saver=$((saver+1))
   if [ $saver -lt 500 ] ;
