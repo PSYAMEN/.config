@@ -1,5 +1,5 @@
 #!/bin/bash
-folder="~/Backgrounds/"
+folder="/home/$USER/Backgrounds/"
 mapfile -t wallpapers < <(find "$folder" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" -o -iname "*.gif" -o -iname "*.webp" \) -printf "%f\t%p\n")
 selected=$(printf '%s\n' "${wallpapers[@]}" | cut -f1 | rofi -dmenu -theme ~/.config/rofi/themes/blue2.rasi -i -p "Backgrounds")
 if [ -n "$selected" ]; then
