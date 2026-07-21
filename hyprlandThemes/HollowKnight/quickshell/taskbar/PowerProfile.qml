@@ -18,8 +18,8 @@ RowLayout{
         anchors.verticalCenter: parent.verticalCenter
         anchors.topMargin:0
         source:"../Images/Badge_"+profile+".png"
-        sourceSize.width: 30
-        sourceSize.height: 30
+        sourceSize.width: 27
+        sourceSize.height: 27
 
     }
     Text{
