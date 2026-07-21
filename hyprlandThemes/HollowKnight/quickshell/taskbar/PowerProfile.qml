@@ -6,7 +6,7 @@ import QtQuick
 import QtQuick
 import QtQuick.Layouts
 
-Row{
+RowLayout{
     id: powerprofile
     spacing:7
 
@@ -20,12 +20,7 @@ Row{
         source:"../Images/Badge_"+profile+".png"
         sourceSize.width: 30
         sourceSize.height: 30
-        MouseArea {
-            anchors.fill: parent
-            onClicked:  {
-                PowerProfiles.profile = (profile +1)% 3
-            }
-        }
+
     }
     Text{
         width: 35   
@@ -39,6 +34,11 @@ Row{
         }
         topPadding:0
         text:profile==0 ? "LOW" : (profile==1 ? "MED" : "HIGH") 
-
+    }
+    MouseArea {
+        anchors.fill:parent
+        onClicked:  {
+            PowerProfiles.profile = (profile +1)% 3
+        }
     }
 }
