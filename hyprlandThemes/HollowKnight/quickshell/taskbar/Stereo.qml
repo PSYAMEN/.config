@@ -5,6 +5,8 @@ import Quickshell.Hyprland
 
 import QtQuick
 import QtQuick.Layouts
+import Qt.labs.folderlistmodel 2.11
+import QtCore
 
 
 Row{
@@ -16,17 +18,23 @@ Row{
         property var cavaValues: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
         Process {
-	    property string homeDir: Quickshell.env("HOME")
+            id:cavaCommand
+            property string homeDir: Quickshell.env("HOME")
             command: [
                 "cava",
                 "-p",
                 homeDir+"/.config/hyprlandThemes/HollowKnight/cava/confs/waybarConf1"
-            ]
+            ]  
 
             running: true
-
+            //Component.onCompleted: {
+            //    console.log("HOME:", homeDir)
+            //    console.log("Config path:", command[2])
+            //    console.log("Command:", JSON.stringify(command))
+            //}
             stdout: SplitParser {
                 onRead: data => {
+                //console.log("CAVA COMMAND:", command)
                     //console.log("RAW:", JSON.stringify(data))
                     let values = data.trim().split(";")
                     let output = []
@@ -40,11 +48,12 @@ Row{
                         output[i] = value
                     }
 
-                //console.log("CAVA PARSED:", output)
+                    // /console.log("CAVA COMMAND:", command)
                     cava.cavaValues = output
                 }
             }
             onExited: {
+                console.log("CAVA COMMAND:", command)
                 running = true
             }
         }

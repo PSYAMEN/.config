@@ -15,10 +15,11 @@ Row{
     property bool charging : battery.state === UPowerDeviceState.Charging
     readonly property int level: Math.round(battery.percentage * 100)
     Image{
-        anchors.top:parent.top
-        anchors.topMargin:2
-        source:"../Images/Nail_"+profile+".png"
-        sourceSize.width: 60
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.topMargin:0
+        source:"../Images/Badge_"+profile+".png"
+        sourceSize.width: 30
+        sourceSize.height: 30
         MouseArea {
             anchors.fill: parent
             onClicked:  {
@@ -27,7 +28,8 @@ Row{
         }
     }
     Text{
-        width: 35        
+        width: 35   
+        anchors.verticalCenter: parent.verticalCenter     
         horizontalAlignment: Text.AlignRight
         color: "#ffffff"        
         font {
