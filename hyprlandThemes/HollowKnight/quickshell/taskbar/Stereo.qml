@@ -16,11 +16,11 @@ Row{
         property var cavaValues: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
         Process {
-
+	    property string homeDir: Quickshell.env("HOME")
             command: [
                 "cava",
                 "-p",
-                "/home/psyamen/.config/hyprlandThemes/HollowKnight/cava/confs/waybarConf1"
+                homeDir+"/.config/hyprlandThemes/HollowKnight/cava/confs/waybarConf1"
             ]
 
             running: true
