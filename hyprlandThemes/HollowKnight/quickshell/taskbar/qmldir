@@ -1,0 +1,14 @@
+module Taskbar
+Bar 1.0 Bar.qml
+Workspaces 1.0 Workspaces.qml
+Wifi 1.0 Wifi.qml
+Audio 1.0 Audio.qml
+Stereo 1.0 Stereo.qml
+Clock 1.0 Clock.qml
+PowerProfile 1.0 PowerProfile.qml
+Battery 1.0 Battery.qml
+Cpu 1.0 Cpu.qml
+Ram 1.0 Ram.qml
+Temp 1.0 Temp.qml
+
+Spacer 1.0 Spacer.qml

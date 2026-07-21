@@ -1,0 +1,5 @@
+module Popups
+AppLauncher 1.0 AppLauncher.qml
+AppFocuser 1.0 AppFocuser.qml
+Background 1.0 Background.qml
+Profile 1.0 Profile.qml
