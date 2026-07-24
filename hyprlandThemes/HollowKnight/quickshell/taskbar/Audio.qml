@@ -27,8 +27,9 @@ RowLayout{
 
     }
     Text {
+        anchors.verticalCenter: parent.verticalCenter
         color: "#ffffff"
-        topPadding:6
+        topPadding:2
         font {
             family: taskbar.fontFamily
             pixelSize: taskbar.fontSize
