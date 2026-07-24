@@ -2,6 +2,7 @@ module Taskbar
 Bar 1.0 Bar.qml
 Workspaces 1.0 Workspaces.qml
 Wifi 1.0 Wifi.qml
+Mic 1.0 Mic.qml
 Audio 1.0 Audio.qml
 Stereo 1.0 Stereo.qml
 Clock 1.0 Clock.qml

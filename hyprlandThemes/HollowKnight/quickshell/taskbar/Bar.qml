@@ -69,7 +69,9 @@ ShellRoot{
 
                     Audio {}
 
-
+                    Spacer{}
+                    
+                    Mic{}
 
                     Clock {}
 
@@ -77,7 +79,9 @@ ShellRoot{
                         Layout.fillWidth: true
                     }
                     PowerProfile{}
+
                     Spacer{}
+                    
                     Battery {}
 
                     Spacer{}

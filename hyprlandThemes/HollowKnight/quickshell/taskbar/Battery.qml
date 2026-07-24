@@ -10,6 +10,7 @@ import QtQuick.Layouts
 Row{
     id: audio
     spacing:7
+    leftPadding:2
 
     property var battery: UPower.displayDevice
     property var profile:PowerProfiles.profile
